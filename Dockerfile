@@ -1,2 +1,2 @@
 FROM tomcat08
-COPY agent/target/*.jar /tmp/tomcat/webapps/
+COPY agent/target/*.jar /tmp/
