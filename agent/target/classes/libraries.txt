@@ -1,0 +1,7 @@
+lib\asm-7.0.jar
+lib\asm-util-7.0.jar
+lib\asm-tree-7.0.jar
+lib\asm-analysis-7.0.jar
+lib\bctrace-core-0.0.1.jar
+lib\bctrace-spi-0.0.1.jar
+lib/flighttickets-1.0-SNAPSHOT-core.jar

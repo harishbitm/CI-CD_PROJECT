@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <jar basedir="C:\devops-files\02-12-21\Maven-practice\flighttickets\agent\target/classes/" excludes="lib/**,io/shiftleft/**,libraries.txt" destfile="C:\devops-files\02-12-21\Maven-practice\flighttickets\agent\target/classes/lib/flighttickets-1.0-SNAPSHOT-core.jar"/>
+  <replace file="C:\devops-files\02-12-21\Maven-practice\flighttickets\agent\target/classes/libraries.txt" value="&#10;" token=";"/>
+  <echo file="C:\devops-files\02-12-21\Maven-practice\flighttickets\agent\target/classes/libraries.txt" append="true">
+lib/flighttickets-1.0-SNAPSHOT-core.jar</echo>
+  <delete includeemptydirs="true">
+    <fileset includes="**/*" dir="C:\devops-files\02-12-21\Maven-practice\flighttickets\agent\target/classes/">
+      <exclude name="io/shiftleft/**"/>
+      <exclude name="lib/**"/>
+      <exclude name="libraries.txt"/>
+    </fileset>
+  </delete>
+</target>
+</project>
