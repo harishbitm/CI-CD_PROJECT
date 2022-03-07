@@ -1,1 +1,20 @@
-harish
+pipeline{
+agent any 
+stages{
+stage('mvn install'){
+steps{
+sh 'mvn clean install'
+sh 'mv target/*.jar target/myapp.jar'
+}
+}
+stage('deploy on tomcat-dev'){
+steps{
+sshagent(['dockerlog']) {
+   sh "
+   ssh -o StrictHostKeyChecking=no target/myapp.jar ubuntu@52.205.128.242:opt/tomcat/webapps/
+   "
+}
+}
+}
+}
+}
