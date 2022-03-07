@@ -3,6 +3,7 @@ agent any
 stages{
 stage('scm checkot'){
 steps{
+echo "scm checkout from github"
 }
 }
 }
