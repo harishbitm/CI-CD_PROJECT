@@ -10,3 +10,4 @@ stage('mvn install'){
 sh 'mvn clean install'
 }
 }
+}
