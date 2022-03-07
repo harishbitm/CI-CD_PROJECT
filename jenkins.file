@@ -26,5 +26,4 @@ withCredentials([string(credentialsId: 'docker-credinceal', variable: 'dockerlog
 }
 }
 }
-}
 
