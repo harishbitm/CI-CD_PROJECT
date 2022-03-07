@@ -10,7 +10,7 @@ sh 'mv agent/target/*.jar agent/target/myapp.jar'
 stage('deploy on tomcat-dev'){
 steps{
 sshagent(['dockerlog']) {
-   sh 'scp -o StrictHostKeyChecking=no agent/target/myapp.jar ubuntu@110.10.1.6:/opt/tomcat8/webapps/'
+   sh 'scp -o StrictHostKeyChecking=no agent/target/myapp.jar ubuntu@54.91.51.146:/opt/tomcat8/webapps/'
 }
 }
 }
