@@ -1,0 +1,9 @@
+pipeline{
+agent any
+stages{
+stage('scm checkot'){
+steps{
+}
+}
+}
+}
