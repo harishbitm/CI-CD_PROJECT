@@ -7,7 +7,9 @@ echo "scm checkout from github"
 }
 }
 stage('mvn install'){
+steps{
 sh 'mvn clean install'
+}
 }
 }
 }
