@@ -22,10 +22,9 @@ withCredentials([string(credentialsId: 'docker-credinceal', variable: 'dockerlog
     steps{
     sh 'docker push harishbitm/ci-cd-project-on-dev-sereve'
     }
-    }
+    
 }
 
 }
 }
 }
-
