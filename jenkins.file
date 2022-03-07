@@ -15,6 +15,7 @@ steps{
 withCredentials([string(credentialsId: 'docker-credinceal', variable: 'dockerlogin')]) {
     sh "docker login -u harishbitm -p ${dockerlogin}"
 	}
+	}
     steps{
     sh 'docker build -t harishbitm/ci-cd-project-on-dev-serever'
     }
