@@ -10,6 +10,15 @@ stage('mvn install'){
 steps{
 sh 'mvn clean install'
 }
+stage('push code to dockerhub'){
+steps{
+withCredentials([string(credentialsId: 'docker-credinceal', variable: 'dockerlogin')]) {
+    sh "docker login -u harishbitm -p ${dockerlogin}"
+    sh 'docker build -t harishbitm/ci-cd-project-on-dev-serever'
+    sh 'docker push harishbitm/ci-cd-project-on-dev-sereve'
+    }
+    }
+}
 }
 }
 }
